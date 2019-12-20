@@ -1283,7 +1283,7 @@ func (feature Feature) SetFieldBinary(index int, value []uint8) {
         C.int(index),
         C.int(len(value)),
         //(*C.GByte)(unsafe.Pointer(&value[0])),
-        (unsafe.Pointer(&value[0])),
+        (unsafe.Pointer(&value[0])), //need more test
     )
 }
 
